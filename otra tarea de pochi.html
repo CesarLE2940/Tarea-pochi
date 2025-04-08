@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nadie me manda a dejarlo pa ultimavhora</title>
+  <style>
+    body { font-family: sans-serif; }
+    h2 { color: purple; }
+    .resultado { margin-top: 10px; font-weight: bold; color: green; }
+    .error { color: red; }
+    .nota { font-style: italic; color: gray; }
+  </style>
+</head>
+<body>
+  <h1>¡El Súper Programa JavaScript de la Galaxia!</h1>
+
+  <h2>Ejercicio 1 (Ejercicio1.pdf) - ¡El Estudiante Mutante Ataca!</h2>
+  <div id="estudianteMutante" class="resultado">
+    <script>
+      document.write("<h3>¡Datos del Estudiante Secreto!</h3>");
+      document.write("<p>Nombre: <b>[Tu Nombre Completo Aquí]</b><hr></p>");
+      document.write("<p>Edad Cósmica: [Tu Edad en Años Terrestres]</p>");
+      document.write("<p>Planeta de Origen: [Tu Ciudad de Residencia, ¡o tu planeta secreto!]</p>");
+      document.write("<p class='nota'>¡Mira cómo metemos HTML directo! Mi nombre es <b>[Otro Nombre Loco]</b><hr></p>");
+    </script>
+  </div>
+
+  <h2>Ejercicio 1 (Ejercicio2.pdf) - ¡La Suma Explosiva!</h2>
+  <div id="sumaExplosiva" class="resultado">
+    <script>
+      const xLoco = 50;
+      const zLoco = 500;
+      const qLoco = " ¡Es la suma atómica de 50 + 500!";
+      document.write("<h3>¡Resultado de la Suma Boom!</h3>");
+      document.write("<p>" + (xLoco + zLoco) + qLoco + "</p>");
+    </script>
+  </div>
+
+  <h2>Ejercicio 2 (Ejercicio2.pdf) - ¡El Arreglo Revuelto y Misterioso!</h2>
+  <div id="arregloMisterioso" class="resultado">
+    <script>
+      const datoLoco = ["[Tu Nombre y Apellido]", "[Tu Edad]", "[Tu Ciudad]"];
+      const campoLoco = ["¡Vive en el increíble ", "! ¡Tiene ", " años de pura energía! Su nombre es ", " y su guarida secreta está en "];
+      document.write("<h3>¡Mensaje Encriptado del Arreglo!</h3>");
+      document.write("<p>" + campoLoco[2] + datoLoco[0] + campoLoco[1] + datoLoco[1] + campoLoco[0] + datoLoco[2] + "!</p>");
+    </script>
+  </div>
+
+  <h2>Ejercicio 3 (Ejercicio2.pdf) - ¡Cazando Variables Bichos Raros!</h2>
+  <div id="cazaVariables" class="resultado">
+    <script>
+      document.write("<h3>¡Alerta de Variables Mutantes!</h3>");
+      document.write("<p><code>new=\"nueva\";</code> <span class='error'>¡PELIGRO!</span> <code>new</code> es palabra prohibida.</p>");
+      document.write("<p><code>var $x=\"44\";</code> ¡Ojo con el <code>$</code> al principio, pero ¡válida por ahora!.</p>");
+      document.write("<p><code>1mivar = 64;</code> <span class='error'>¡ERROR!</span> ¡Números al principio NO!</p>");
+      document.write("<p><code>mi-variable =\"If\";</code> <span class='error'>¡CUIDADO!</span> ¡Guiones medios prohibidos en nombres!</p>");
+      document.write("<p><code>mi_variable=\"delete\";</code> <span class='error'>¡ALARMA!</span> <code>delete</code> es palabra secreta.</p>");
+    </script>
+  </div>
+
+  <h2>Ejercicio 1 (Ejercicio3.pdf) - ¡El Oráculo de JavaScript Responde!</h2>
+  <div id="oraculoJS" class="resultado">
+    <script>
+      document.write("<h3>¡Las Revelaciones del Oráculo JavaScript!</h3>");
+      document.write("<h4>1. ¡Los Cuatro Fantásticos Datos!</h4>");
+      document.write("<ul>");
+      document.write("<li><strong>String:</strong> ¡Como 'Hola, universo!'</li>");
+      document.write("<li><strong>Number:</strong> ¡Como el número pi: 3.14159!</li>");
+      document.write("<li><strong>Boolean:</strong> ¡Verdadero (true) o Falso (false)!</li>");
+      document.write("<li><strong>Undefined:</strong> ¡Como una caja vacía! <code>var algoSinValor;</code></li>");
+      document.write("</ul>");
+
+      document.write("<h4>2. ¡El Arreglo, la Banda de Elementos!</h4>");
+      document.write("<p>¡Un arreglo es como una fila de amigos, cada uno en su lugar! Ejemplo: <code>var coloresLocos = ['rojo', 'azul', 'verde'];</code></p>");
+
+      document.write("<h4>3. ¡El Conjuro Borrador del Segundo Elemento!</h4>");
+      document.write("<p>Si tu arreglo se llama <code>coloresLocos</code>, ¡el hechizo es: <code>coloresLocos.splice(1, 1);</code>!</p>");
+
+      document.write("<h4>4. ¡Hablando en Clave JavaScript!</h4>");
+      document.write("<ul>");
+      document.write("<li><code>Algo += aumentar;</code> ¡es como decir: <code>Algo = Algo + aumentar;</code>!</li>");
+      document.write("<li><code>Y = Y + X;</code> ¡es lo mismo que <code>Y += X;</code>!</li>");
+      document.write("<li><code>Nombres = Nombres + \" Riascos\";</code> ¡secreto: <code>Nombres += \" Riascos\";</code>!</li>");
+      document.write("<li><code>T = T % 8;</code> ¡en clave: <code>T %= 8;</code>!</li>");
+      document.write("<li><code>++A;</code> ¡significa <code>A = A + 1;</code> o <code>A += 1;</code>!</li>");
+      document.write("<li><code>Z = Z / 5 + 45;</code> ¡esta es más directa, ¡sin atajos locos aquí por ahora!</li>");
+      document.write("</ul>");
+
+      document.write("<h4>5. ¡El Enigma de los Valores Finales!</h4>");
+      document.write("<pre>");
+      document.write("Z = 25;<br>");
+      document.write("X = ++Z;   // Z ahora es 26, ¡y X también! (como gemelos)<br>");
+      document.write("W = X-- + Z; // W es 26 + 26 = 52, ¡pero X vuelve a 25! (drama)<br>");
+      document.write("Y = (X % Z + 3); // Y es (25 % 26 + 3) = 25 + 3 = 28 (¡matemáticas locas!)<br>");
+      document.write("V = (X / W >= Z); // V es (25 / 52 >= 26), ¡que es FALSO! (¡sorpresa!)<br>");
+      document.write("Z -= 26;   // Z se desvanece a 0.<br>");
+      document.write("X -= 25;   // X también se desvanece a 0.<br>");
+      document.write("W -= 52;   // W... ¡también a 0!<br>");
+      document.write("Y -= 28;   // Y... ¡adivinaste! 0.<br>");
+      document.write("</pre>");
+      document.write("<p>¡Los valores finales son: V = false, X = 0, Y = 0, Z = 0, W = 0! ¡Un final explosivo!</p>");
+    </script>
+  </div>
+
+  <h2>Ejercicio 1 (Ejercicio4.pdf) - ¡La Fiesta de las Áreas Geométricas!</h2>
+  <div id="fiestaAreas" class="resultado">
+    <script>
+      // ¡Funciones de cálculo de áreas con nombres de superhéroes!
+      function cuadrado(lado) {
+        return lado * lado;
+      }
+
+      function rectangulo(lado1, lado2) {
+        return lado1 * lado2;
+      }
+
+      function triangulo(base, altura) {
+        return (base * altura) / 2;
+      }
+
+      // ¡El gran creador de esta maravilla!
+      const miNombreLoco = "[Tu Nombre y Apellido Cósmico]";
+      document.write("<h3>¡El Festival de las Formas y sus Áreas!</h3>");
+      document.write("<p>¡Creado por el increíble: " + miNombreLoco + "!</p><hr>");
+
+      // ¡Calculando y mostrando como si no hubiera mañana!
+      const ladoCuadradoLoco = 10;
+      const areaCuadradoLoco = cuadrado(ladoCuadradoLoco);
+      document.write("<p>¡El Cuadrado de lado " + ladoCuadradoLoco + " cm tiene un área de " + areaCuadradoLoco + " cm<sup>2</sup>!</p>");
+
+      const ladoRectanguloLoco1 = 15;
+      const ladoRectanguloLoco2 = 8;
+      const areaRectanguloLoco = rectangulo(ladoRectanguloLoco1, ladoRectanguloLoco2);
+      document.write("<p>¡El Rectángulo de lados " + ladoRectanguloLoco1 + " cm y " + ladoRectanguloLoco2 + " cm tiene un área de " + areaRectanguloLoco + " cm<sup>2</sup>!</p>");
+
+      const baseTrianguloLoco = 20;
+      const alturaTrianguloLoco = 10;
+      const areaTrianguloLoco = triangulo(baseTrianguloLoco, alturaTrianguloLoco);
+      document.write("<p>¡El Triángulo de base " + baseTrianguloLoco + " cm y altura " + alturaTrianguloLoco + " cm tiene un área de " + areaTrianguloLoco + " cm<sup>2</sup>!</p>");
+    </script>
+  </div>
+
+  <p class="nota">¡Recuerda reemplazar los corchetes <code>[...]</code> con tu información súper secreta!</p>
+</body>
+</html>
