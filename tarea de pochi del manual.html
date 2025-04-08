@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicios de JavaScript</title>
+</head>
+<body>
+<script>
+function mostrarMenu() {
+  return parseInt(prompt(
+    "Elige una opción:\n" +
+    "1. Convertir metros a centímetros\n" +
+    "2. Área y perímetro de un rectángulo\n" +
+    "3. Sumar dos números\n" +
+    "4. Número par o impar\n" +
+    "5. Positivo, negativo o cero\n" +
+    "6. Promedio de tres números\n" +
+    "7. Número mayor de tres\n" +
+    "8. Mostrar números del 1 al 100\n" +
+    "9. Mostrar números pares del 1 al 100\n" +
+    "10. Sumar del 1 al 100\n" +
+    "0. Salir"
+  ));
+}
+
+function ejecutarPrograma(opcion) {
+  switch(opcion) {
+    case 1:
+      let metros = parseFloat(prompt("Introduce los metros:"));
+      alert(`${metros} metros son ${metros * 100} centímetros.`);
+      break;
+    case 2:
+      let base = parseFloat(prompt("Base del rectángulo:"));
+      let altura = parseFloat(prompt("Altura:"));
+      alert(`Área: ${base * altura}, Perímetro: ${2 * (base + altura)}`);
+      break;
+    case 3:
+      let n1 = parseFloat(prompt("Número 1:"));
+      let n2 = parseFloat(prompt("Número 2:"));
+      alert(`La suma es: ${n1 + n2}`);
+      break;
+    case 4:
+      let numero = parseInt(prompt("Número:"));
+      alert(numero % 2 === 0 ? "Es par." : "Es impar.");
+      break;
+    case 5:
+      let num = parseFloat(prompt("Número:"));
+      alert(num > 0 ? "Positivo" : num < 0 ? "Negativo" : "Cero");
+      break;
+    case 6:
+      let a = parseFloat(prompt("Número 1:"));
+      let b = parseFloat(prompt("Número 2:"));
+      let c = parseFloat(prompt("Número 3:"));
+      alert(`Promedio: ${(a + b + c) / 3}`);
+      break;
+    case 7:
+      let x = parseFloat(prompt("Número A:"));
+      let y = parseFloat(prompt("Número B:"));
+      let z = parseFloat(prompt("Número C:"));
+      let mayor = Math.max(x, y, z);
+      alert(`El mayor es: ${mayor}`);
+      break;
+    case 8:
+      let nums = "";
+      for (let i = 1; i <= 100; i++) nums += i + " ";
+      alert(nums);
+      break;
+    case 9:
+      let pares = "";
+      for (let i = 1; i <= 100; i++) if (i % 2 === 0) pares += i + " ";
+      alert(pares);
+      break;
+    case 10:
+      let suma = 0;
+      for (let i = 1; i <= 100; i++) suma += i;
+      alert(`Suma total: ${suma}`);
+      break;
+    case 0:
+      alert("¡Gracias por usar el programa!");
+      return false;
+    default:
+      alert("Opción no válida.");
+  }
+  return true;
+}
+
+// Bucle principal
+let continuar = true;
+while (continuar) {
+  let opcion = mostrarMenu();
+  continuar = ejecutarPrograma(opcion);
+}
+</script>
+</body>
+</html>
