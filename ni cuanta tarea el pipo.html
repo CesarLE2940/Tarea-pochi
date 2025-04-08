@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicios Combinados de JavaScript</title>
+  <style>
+    body { font-family: sans-serif; }
+    h2 { color: purple; }
+    .resultado { margin-top: 10px; font-weight: bold; color: green; }
+    .error { color: red; }
+    .nota { font-style: italic; color: gray; }
+  </style>
+</head>
+<body>
+  <h1>¡El Gran Compendio de Ejercicios JavaScript!</h1>
+
+  <h2>Ejercicio 1 (Taller 1/4) - ¡El Perfil Web!</h2>
+  <div id="perfilWeb" class="resultado">
+    <script>
+      document.write("<h3>¡Mi Perfil en la Web!</h3>");
+      document.write("<p>Nombre: <b>[Tu Nombre Completo]</b><hr></p>");
+      document.write("<p>¡Con un toque de HTML en JS! Ejemplo: Mi nombre es <b>[Otro Nombre]</b><hr></p>");
+    </script>
+  </div>
+
+  <h2>Ejercicio 1 (Taller 5) - ¡El Círculo Mágico!</h2>
+  <div id="circuloMagico" class="resultado">
+    <script>
+      const radioCirculo = 12;
+      const areaCirculo = Math.PI * Math.pow(radioCirculo, 2);
+      document.write("<h3>¡El Área del Círculo Misterioso!</h3>");
+      document.write("<p>El área de un círculo con radio " + radioCirculo + " cm es: " + areaCirculo.toFixed(2) + " cm<sup>2</sup></p>");
+    </script>
+  </div>
+
+  <h2>Ejercicio 2 (Taller 5) - ¡Mi Carta de Presentación!</h2>
+  <div id="presentacion" class="resultado">
+    <script>
+      const miNombre = "[Tus Nombres]";
+      const misApellidos = "[Tus Apellidos]";
+      const miCiudad = "[Tu Ciudad]";
+      const miDiaNacimiento = "[Tu Día de Nacimiento (ej: Domingo)]";
+
+      document.write("<h3>¡Directo desde mi Código!</h3>");
+      document.write("<p>Me llamo " + miNombre + " " + misApellidos + " soy de " + miCiudad + " y nací un día " + miDiaNacimiento + "</p>");
+    </script>
+  </div>
+
+  <h2>Ejercicio 1 (Taller 6) - ¡La Página Camaleón!</h2>
+  <div id="paginaCamaleon" class="resultado">
+    <script>
+      document.body.style.backgroundColor = "BLACK";
+      document.body.style.color = "yellow";
+      const enlaces = document.querySelectorAll('a');
+      enlaces.forEach(link => {
+        link.style.color = "white";
+        link.addEventListener('mouseout', () => link.style.color = "red");
+      });
+      document.title = "¡Página en Negro y Amarillo!";
+      document.write("<h3>¡Mira cómo cambian los colores!</h3>");
+      document.write("<p><a href='#'>¡Enlace brillante!</a></p>");
+    </script>
+  </div>
+
+  <h2>Ejercicio 3 (Taller 2) - ¡Los Errores de Variable al Desnudo!</h2>
+  <div id="erroresVariables" class="resultado">
+    <script>
+      document.write("<h3>¡Cuidado con estas Variables Peligrosas!</h3>");
+      document.write("<p><code>new=\"nueva\";</code> <span class='error'>¡Palabra reservada!</span> No se puede usar <code>new</code> como nombre de variable.</p>");
+      document.write("<p><code>1mivar = 64;</code> <span class='error'>¡Empieza con letra!</span> Los nombres no pueden iniciar con un número.</p>");
+      document.write("<p><code>mi-variable = \"If\";</code> <span class='error'>¡Guion prohibido!</span> Usa guion bajo (<code>_</code>) mejor.</p>");
+      document.write("<p><code>mi_variable=\"delete\";</code> <span class='error'>¡Palabra reservada!</span> <code>delete</code> tiene un significado especial.</p>");
+      document.write("<p><code>var $x = \"44\";</code> ¡Válido, pero el <code>$</code> al inicio no es común!</p>");
+    </script>
+  </div>
+
+  <h2>Ejercicio 1 (Taller 3) - ¡Conceptos Clave de JavaScript!</h2>
+  <div id="conceptosJS" class="resultado">
+    <script>
+      document.write("<h3>¡Pilares Fundamentales de JS!</h3>");
+      document.write("<h4>1. Tipos de Datos:</h4><ul>");
+      document.write("<li>String: 'Hola'</li>");
+      document.write("<li>Number: 10, 3.14</li>");
+      document.write("<li>Boolean: true, false</li>");
+      document.write("<li>Undefined: var sinValor; (su valor es undefined)</li>");
+      document.write("</ul>");
+      document.write("<h4>2. Arreglo:</h4><p>Colección ordenada: <code>['elemento1', 2, true]</code></p>");
+      document.write("<h4>3. Borrar segundo elemento:</h4><p>Si tienes <code>miArreglo</code>, usa: <code>miArreglo.splice(1, 1);</code></p>");
+      document.write("<h4>4. Expresiones Alternativas:</h4><ul>");
+      document.write("<li><code>Algo += aumentar;</code> es igual a <code>Algo = Algo + aumentar;</code></li>");
+      document.write("<li><code>Y = Y + X;</code> es igual a <code>Y += X;</code></li>");
+      document.write("<li><code>Nombres = Nombres + \" Riascos\";</code> es igual a <code>Nombres += \" Riascos\";</code></li>");
+      document.write("<li><code>T = T % 8;</code> es igual a <code>T %= 8;</code></li>");
+      document.write("<li><code>++A;</code> es igual a <code>A = A + 1;</code> o <code>A += 1;</code></li>");
+      document.write("<li><code>Z = Z / 5 + 45;</code> (no hay un atajo directo simple)</li>");
+      document.write("</ul>");
+      document.write("<h4>5. ¡El Desafío de las Variables!</h4>");
+      document.write("<pre>Z = 25;\nX = ++Z;   // Z=26, X=26\nW = X-- + Z; // W=26+26=52, X=25\nY = (X % Z + 3); // Y=(25%26+3)=28\nV = (X / W >= Z); // V=(25/52 >= 26) -> false\nZ -= 26;   // Z=0\nX -= 25;   // X=0\nW -= 52;   // W=0\nY -= 28;   // Y=0</pre>");
+      document.write("<p>Valores finales: V = false, X = 0, Y = 0, Z = 0, W = 0</p>");
+    </script>
+  </div>
+
+  <h2>Ejercicio 1 (Taller 4) - ¡La Geometría en la Web!</h2>
+  <div id="geometriaWeb" class="resultado">
+    <script>
+      function cuadrado(lado) { return lado * lado; }
+      function rectangulo(lado1, lado2) { return lado1 * lado2; }
+      function triangulo(base, altura) { return (base * altura) / 2; }
+
+      document.write("<h3>¡Calculando Formas!</h3>");
+      document.write("<p>Creado por: [Tu Nombre Aquí]</p><hr>");
+      document.write("<p>Área del cuadrado (lado 10 cm): " + cuadrado(10) + " cm<sup>2</sup></p>");
+      document.write("<p>Área del rectángulo (15 cm x 8 cm): " + rectangulo(15, 8) + " cm<sup>2</sup></p>");
+      document.write("<p>Área del triángulo (base 20 cm, altura 10 cm): " + triangulo(20, 10) + " cm<sup>2</sup></p>");
+    </script>
+  </div>
+
+  <h2>Ejercicio 3 (Taller 5) - ¡Objetos en Acción! (Ejemplos)</h2>
+  <div id="objetosJS" class="resultado">
+    <script>
+      document.write("<h3>¡Explorando Objetos en JS!</h3>");
+      // Ejemplo 1: Objeto literal
+      const miObjeto = { nombre: "[Tu Nombre]", edad: "[Tu Edad]" };
+      document.write("<p>Objeto literal: Nombre - " + miObjeto.nombre + ", Edad - " + miObjeto.edad + "</p>");
+
+      // Ejemplo 2: Objeto Date
+      const ahora = new Date();
+      document.write("<p>Objeto Date (ahora): " + ahora.toLocaleString() + "</p>");
+
+      // Ejemplo 3: Objeto Math
+      document.write("<p>Objeto Math (PI): " + Math.PI + "</p>");
+
+      // Ejemplo 4: Objeto String
+      const miCadena = "Hola Mundo";
+      document.write("<p>Objeto String (longitud): " + miCadena.length + "</p>");
+
+      // Ejemplo 5: Objeto Array
+      const miArregloEjemplo = [1, 2, 3];
+      document.write("<p>Objeto Array (primer elemento): " + miArregloEjemplo[0] + "</p>");
+    </script>
+  </div>
+
+  <p class="nota">¡Recuerda reemplazar los corchetes <code>[...]</code> con tu información!</p>
+</body>
+</html>
