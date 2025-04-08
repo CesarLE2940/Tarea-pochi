@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicios Combinados de JavaScript</title>
+</head>
+<body>
+  <h1>Ejercicios Combinados de JavaScript</h1>
+  <hr>
+
+  <h2>Ejercicio 1 (Taller 1 - Datos del Estudiante)</h2>
+  <div id="datosEstudiante">
+    <script>
+      // Datos del estudiante proporcionados por el usuario
+      var nombreEstudiante = "Cesar Lantigua";
+      var edadEstudiante = "19";
+      var ciudadEstudiante = "Moca";
+
+      document.write("<h3>Datos del Estudiante:</h3>");
+      document.write("<p>Mi nombre es <b>" + nombreEstudiante + "</b><hr></p>");
+      document.write("<p>Tengo " + edadEstudiante + " años.</p>");
+      document.write("<p>Vivo en " + ciudadEstudiante + ".</p>");
+    </script>
+  </div>
+  <hr>
+
+  <h2>Ejercicio 1 (Taller 2 - Suma)</h2>
+  <div id="suma">
+    <script>
+      var x = 50;
+      var z = 500;
+      var q = " Es la suma de 50 + 500";
+      document.write("<h3>Ejercicio de Suma:</h3>");
+      document.write("<p>" + (x + z) + q + "</p>");
+    </script>
+  </div>
+  <hr>
+
+  <h2>Ejercicio 2 (Taller 2 - Arreglos)</h2>
+  <div id="arreglos">
+    <script>
+      // Datos del estudiante proporcionados por el usuario
+      var datoArreglo = [nombreEstudiante, edadEstudiante, ciudadEstudiante];
+      var campoArreglo = ["Vivo en ", "Tengo ", " años. Mi nombre es ", " y vivo en "];
+
+      document.write("<h3>Ejercicio de Arreglos:</h3>");
+      document.write("<p>" + campoArreglo[3] + datoArreglo[0] + campoArreglo[1] + datoArreglo[1] + campoArreglo[2] + datoArreglo[0].split(' ')[0] + campoArreglo[4] + datoArreglo[2] + ".</p>");
+    </script>
+  </div>
+  <hr>
+
+  <h2>Ejercicio 1 (Taller 4 - Cálculo de Áreas)</h2>
+  <div id="calculoAreas">
+    <script>
+      // Autor de la página (datos del usuario)
+      var autorNombre = nombreEstudiante.split(' ')[0]; // Tomando el primer nombre
+      var autorApellido = nombreEstudiante.split(' ')[nombreEstudiante.split(' ').length - 1]; // Tomando el último apellido
+
+      document.write("<h3>Cálculo de Áreas:</h3>");
+      document.write("<p>Página creada por: " + autorNombre + " " + autorApellido + "</p>");
+      document.write("<hr>");
+
+      // Función para calcular el área de un cuadrado
+      function cuadrado(lado) {
+        return lado * lado;
+      }
+
+      // Función para calcular el área de un rectángulo
+      function rectangulo(lado1, lado2) {
+        return lado1 * lado2;
+      }
+
+      // Función para calcular el área de un triángulo
+      function triangulo(base, altura) {
+        return (base * altura) / 2;
+      }
+
+      // Calcular y mostrar el área del cuadrado
+      var ladoCuadrado = 10;
+      var areaCuadrado = cuadrado(ladoCuadrado);
+      document.write("<p>Área del cuadrado de lado " + ladoCuadrado + " cm = " + areaCuadrado + " cm<sup>2</sup></p>");
+
+      // Calcular y mostrar el área del rectángulo
+      var ladoRectangulo1 = 15;
+      var ladoRectangulo2 = 8;
+      var areaRectangulo = rectangulo(ladoRectangulo1, ladoRectangulo2);
+      document.write("<p>Área del rectángulo de lados " + ladoRectangulo1 + " cm y " + ladoRectangulo2 + " cm = " + areaRectangulo + " cm<sup>2</sup></p>");
+
+      // Calcular y mostrar el área del triángulo
+      var baseTriangulo = 20;
+      var alturaTriangulo = 10;
+      var areaTriangulo = triangulo(baseTriangulo, alturaTriangulo);
+      document.write("<p>Área del triángulo de base " + baseTriangulo + " cm y altura " + alturaTriangulo + " cm = " + areaTriangulo + " cm<sup>2</sup></p>");
+    </script>
+  </div>
+  <hr>
+
+  <h2>Ejercicio 3 (Taller 2 - Variables Mal Declaradas)</h2>
+  <div id="variablesMal">
+    <script>
+      document.write("<h3>Variables Mal Declaradas:</h3>");
+      document.write("<p><code>new=\"nueva\";</code> está mal porque <code>new</code> es una palabra reservada en JavaScript.</p>");
+      document.write("<p><code>1mivar = 64;</code> está mal porque los nombres de las variables no pueden comenzar con un número.</p>");
+      document.write("<p><code>mi-variable = \"If\";</code> está mal porque los nombres de las variables no pueden contener guiones medios (-).</p>");
+      document.write("<p><code>mi_variable=\"delete\";</code> está mal porque <code>delete</code> es una palabra reservada en JavaScript.</p>");
+      document.write("<p><code>var $x = \"44\";</code> es una declaración válida, aunque el uso de <code>$</code> al inicio no es una práctica común para variables regulares.</p>");
+    </script>
+  </div>
+  <hr>
+
+  <h2>Ejercicio 1 (Taller 3 - Tipos de Datos, Arreglos, Sentencias)</h2>
+  <div id="taller3">
+    <script>
+      document.write("<h3>Ejercicio Taller 3:</h3>");
+      document.write("<h4>1. Tipos de datos en JavaScript:</h4>");
+      document.write("<ul>");
+      document.write("<li><strong>String:</strong> Cadena de texto. Ejemplo: <code>\"Hola Mundo\"</code></li>");
+      document.write("<li><strong>Number:</strong> Valor numérico (entero o decimal). Ejemplo: <code>10</code>, <code>3.14</code></li>");
+      document.write("<li><strong>Boolean:</strong> Valor lógico verdadero o falso. Ejemplo: <code>true</code>, <code>false</code></li>");
+      document.write("<li><strong>Undefined:</strong> Variable sin valor asignado. Ejemplo: <code>var ejemplo;</code> (<code>ejemplo</code> es undefined)</li>");
+      document.write("</ul>");
+
+      document.write("<h4>2. Arreglo:</h4>");
+      document.write("<p>Un arreglo es una colección ordenada de elementos que pueden ser de diferentes tipos. Se accede a cada elemento mediante un índice que comienza en 0.</p>");
+      document.write("<p>Ejemplo de arreglo: <code>var colores = [\"rojo\", \"verde\", \"azul\"];</code></p>");
+
+      document.write("<h4>3. Sentencia para borrar el segundo elemento del arreglo 'colores':</h4>");
+      document.write("<p><code>colores.splice(1, 1);</code></p>");
+
+      document.write("<h4>4. Formas alternativas de las expresiones:</h4>");
+      document.write("<table>");
+      document.write("<tr><th>Expresión Original</th><th>Expresión Alternativa</th></tr>");
+      document.write("<tr><td><code>Algo += aumentar</code></td><td><code>Algo = Algo + aumentar;</code></td></tr>");
+      document.write("<tr><td><code>Y = Y + X;</code></td><td><code>Y += X;</code></td></tr>");
+      document.write("<tr><td><code>Nombres = Nombres + \" Riascos\";</code></td><td><code>Nombres += \" Riascos\";</code></td></tr>");
+      document.write("<tr><td><code>T = T % 8;</code></td><td><code>T %= 8;</code></td></tr>");
+      document.write("<tr><td><code>++A;</code></td><td><code>A = A + 1;</code> o <code>A += 1;</code></td></tr>");
+      document.write("<tr><td><code>Z = Z / 5 + 45;</code></td><td>No hay una forma significativamente más corta sin operadores compuestos para toda la expresión.</td></tr>");
+      document.write("</table>");
+
+      document.write("<h4>5. Valor final de las variables:</h4>");
+      document.write("<pre>");
+      document.write("Z = 25;<br>");
+      document.write("X = ++Z;   // Z = 26, X = 26<br>");
+      document.write("W = X-- + Z; // W = 26 + 26 = 52, X = 25<br>");
+      document.write("Y = (X % Z + 3); // Y = (25 % 26 + 3) = 25 + 3 = 28<br>");
+      document.write("V = (X / W >= Z); // V = (25 / 52 >= 26) = false<br>");
+      document.write("Z -= 26;   // Z = 0<br>");
+      document.write("X -= 25;   // X = 0<br>");
+      document.write("W -= 52;   // W = 0<br>");
+      document.write("Y -= 28;   // Y = 0<br>");
+      document.write("</pre>");
+      document.write("<p>Valores finales: V = false, X = 0, Y = 0, Z = 0, W = 0</p>");
+    </script>
+  </div>
+
+</body>
+</html>
